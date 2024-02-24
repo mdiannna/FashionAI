@@ -20,5 +20,8 @@ Implementation of the MVP1:
 ## Running the code
 ```$ uvicorn main:app --reload```
 
+## Dataset
+The dataset was obtained from https://www.kaggle.com/datasets/paramaggarwal/fashion-product-images-small
+
 ## Additional resources and links
 This project references https://github.com/mdiannna/AIRecommenderSimilarPosts
