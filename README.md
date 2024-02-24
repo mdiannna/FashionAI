@@ -20,5 +20,5 @@ Backend for the MVP 1:
 ## Running the code
 ```$ uvicorn main:app --reload```
 
-## Additional resources
+## Additional resources and links
 This project references https://github.com/mdiannna/AIRecommenderSimilarPosts
