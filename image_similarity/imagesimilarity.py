@@ -56,7 +56,7 @@ class ImageSimilarity:
         img2_features = self.extract_features(self.model, img_path2)
         return self.compute_similarity_btw_features(img1_features, img2_features)
 
-    def get_most_similar(self, base_img_path, imgs_path, nr_similar_imgs=3):
+    def get_most_similar(self, base_img_path, imgs_path, nr_similar_imgs=3, max_compare_imgs=10):
         """Get the most similar images to the image specified in img_path.
         
         Args:
@@ -70,10 +70,30 @@ class ImageSimilarity:
         imgs_to_compare = [os.path.join(imgs_path, x) for x in os.listdir(imgs_path) if 
                            (not os.path.join(imgs_path, x) == base_img_path) and 
                            (("png" in x) or ("jpg" in x) or ("jpeg" in x))]
+        
+        
         base_img_features = self.extract_features(self.model, base_img_path)
         all_similarities = [self.compute_similarity(base_img_path, img_to_compare) for img_to_compare in imgs_to_compare]
+        
+        #if the similarity is close to 1, it means it's the same image, avoid this case:
+        all_similarities = list(filter(lambda a: a <=0.99, all_similarities))
+
+        print("all similarities:", all_similarities)
         most_similar_idx = np.argmax(all_similarities)
-        return most_similar_idx, imgs_to_compare[most_similar_idx]
+
+        # sort decreasing by indices:
+        sorted_similarities = np.argsort(-np.array(all_similarities))
+
+        
+        print("sorted similarities:", sorted_similarities)
+        
+        
+        # #filter only the top 3 similar images:
+        # sorted_similarities = sorted_similarities[:nr_similar_imgs]
+
+        imgs_to_compare = np.array(imgs_to_compare)
+
+        return most_similar_idx, imgs_to_compare[most_similar_idx], imgs_to_compare[sorted_similarities]
 
     def load_model(self, model_name='vgg16', from_keras=True):
         """Load model for image similarity.
