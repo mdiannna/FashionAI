@@ -24,4 +24,7 @@ Implementation of the MVP1:
 The dataset was obtained from https://www.kaggle.com/datasets/paramaggarwal/fashion-product-images-small
 
 ## Additional resources and links
-This project references https://github.com/mdiannna/AIRecommenderSimilarPosts
+This project is build upon https://github.com/mdiannna/AIRecommenderSimilarPosts
+
+## Project status
+This project is a work in progress. Currently it works with static images. In the future, it will be updated with capabilities to search in existing online stores, as well as multi-user support and performance improvements. Watch this repo for further updates.
