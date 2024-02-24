@@ -7,9 +7,9 @@ Frontend for the MVP 1:
 
 <hr>
 
-Backend for the MVP 1:
+Implementation of the MVP1:
+![Frontend](fashionAI_MVP1.png)
 
-![Frontend](fashionAI_backend_v1.png)
 
 
 ## Installation and requirements
