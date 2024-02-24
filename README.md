@@ -12,4 +12,11 @@ Backend for the MVP 1:
 ![Frontend](fashionAI_backend_v1.png)
 
 
+## Installation and requirements
+- python 3.12
+- fastapi
+- uvicorn
+
+## Running the code
+```$ uvicorn main:app --reload```
 
