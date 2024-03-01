@@ -1,6 +1,12 @@
 # FashionAI
 AI for sustainable replacement of old clothes with new fashion items
 
+FashionAI simplifies the search for your perfect fashion item. Just upload a photo of what you want, and FashionAI will find similar options from online stores. 
+No more endless scrolling—FashionAI makes discovering your style effortless.
+
+
+
+
 Frontend for the MVP 1:
 
 ![Frontend](FashionAI_frontend.png)
