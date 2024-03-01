@@ -7,13 +7,6 @@ No more endless scrolling—FashionAI makes discovering your style effortless.
 
 
 
-Frontend for the MVP 1:
-
-![Frontend](FashionAI_frontend.png)
-
-<hr>
-
-Implementation of the MVP1:
 ![Frontend](fashionAI_MVP1.png)
 
 
